@@ -1,65 +1,126 @@
-import Image from "next/image";
+import Link from "next/link";
+
+const featuredWork = [
+  {
+    id: 1,
+    title: "Brand Identity",
+    category: "Branding",
+    year: "2024",
+    description: "Full visual identity system including logo, typography, and brand guidelines.",
+    color: "#E8E4DF",
+  },
+  {
+    id: 2,
+    title: "Digital Campaign",
+    category: "Visual Design",
+    year: "2024",
+    description: "Art direction and design for a multi-platform digital campaign.",
+    color: "#DFE4E8",
+  },
+  {
+    id: 3,
+    title: "Product UI",
+    category: "UI/UX",
+    year: "2023",
+    description: "End-to-end product design for a SaaS platform from research to delivery.",
+    color: "#E4DFE8",
+  },
+];
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <>
+      {/* Hero */}
+      <section className="px-6 md:px-12 pt-20 pb-24 md:pt-28 md:pb-32 max-w-5xl">
+        <p className="section-label fade-up fade-up-d1">Designer &amp; Creative Director</p>
+        <h1
+          className="mt-5 text-4xl md:text-6xl font-light leading-tight fade-up fade-up-d2"
+          style={{ color: "var(--text-primary)", letterSpacing: "-0.02em" }}
+        >
+          Crafting intentional
+          <br />
+          <em style={{ fontStyle: "italic" }}>visual experiences</em>
+        </h1>
+        <p
+          className="mt-6 text-base md:text-lg leading-relaxed max-w-xl fade-up fade-up-d3"
+          style={{ color: "var(--text-secondary)" }}
+        >
+          I design brands, interfaces, and campaigns that feel both purposeful and
+          beautiful. Based in San Luis Obispo, working globally.
+        </p>
+        <div className="mt-10 flex flex-wrap gap-3 fade-up fade-up-d4">
+          <Link href="/work" className="btn-primary">View Work</Link>
+          <Link href="/contact" className="btn-secondary">Get in Touch</Link>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+      </section>
+
+      <div className="px-6 md:px-12">
+        <div style={{ height: "1px", background: "var(--border)" }} />
+      </div>
+
+      {/* Featured work */}
+      <section className="px-6 md:px-12 py-20 md:py-24">
+        <div className="flex items-center justify-between mb-10">
+          <p className="section-label">Selected Work</p>
+          <Link
+            href="/work"
+            className="text-sm"
+            style={{ color: "var(--text-secondary)", textDecoration: "none" }}
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+            All projects →
+          </Link>
         </div>
-      </main>
-    </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+          {featuredWork.map((project) => (
+            <Link
+              key={project.id}
+              href={`/work#project-${project.id}`}
+              className="project-card group block"
+              style={{ textDecoration: "none" }}
+            >
+              <div
+                className="w-full aspect-[4/3] flex items-end p-5"
+                style={{ background: project.color }}
+              >
+                <span className="section-label">{project.category}</span>
+              </div>
+              <div className="p-5">
+                <div className="flex items-start justify-between">
+                  <h3 className="text-base font-medium" style={{ color: "var(--text-primary)" }}>
+                    {project.title}
+                  </h3>
+                  <span className="text-xs" style={{ color: "var(--text-secondary)" }}>
+                    {project.year}
+                  </span>
+                </div>
+                <p className="mt-2 text-sm leading-relaxed" style={{ color: "var(--text-secondary)" }}>
+                  {project.description}
+                </p>
+              </div>
+            </Link>
+          ))}
+        </div>
+      </section>
+
+      <div className="px-6 md:px-12">
+        <div style={{ height: "1px", background: "var(--border)" }} />
+      </div>
+
+      {/* About strip */}
+      <section className="px-6 md:px-12 py-20 md:py-24 max-w-3xl">
+        <p className="section-label">About</p>
+        <p
+          className="mt-5 text-xl md:text-2xl font-light leading-relaxed"
+          style={{ color: "var(--text-primary)", letterSpacing: "-0.01em" }}
+        >
+          I bring together strategy, craft, and a relentless attention to detail to
+          create work that resonates.
+        </p>
+        <Link href="/about" className="btn-secondary mt-8 w-fit" style={{ display: "inline-flex" }}>
+          More about me
+        </Link>
+      </section>
+    </>
   );
 }

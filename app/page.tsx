@@ -7,7 +7,7 @@ const featuredWork = [
     category: "Branding",
     year: "2024",
     description: "Full visual identity system including logo, typography, and brand guidelines.",
-    color: "#E8E4DF",
+    color: "#444054",
   },
   {
     id: 2,
@@ -15,7 +15,7 @@ const featuredWork = [
     category: "Visual Design",
     year: "2024",
     description: "Art direction and design for a multi-platform digital campaign.",
-    color: "#DFE4E8",
+    color: "#DB8A74",
   },
   {
     id: 3,
@@ -23,7 +23,7 @@ const featuredWork = [
     category: "UI/UX",
     year: "2023",
     description: "End-to-end product design for a SaaS platform from research to delivery.",
-    color: "#E4DFE8",
+    color: "#2F243A",
   },
 ];
 

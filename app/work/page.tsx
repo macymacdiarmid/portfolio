@@ -7,7 +7,7 @@ const projects = [
     description:
       "Full visual identity system including logo, typography, color palette, and comprehensive brand guidelines for a boutique hospitality brand.",
     tags: ["Logo Design", "Brand System", "Typography", "Guidelines"],
-    color: "#E8E4DF",
+    color: "#444054",
   },
   {
     id: 2,
@@ -17,7 +17,7 @@ const projects = [
     description:
       "Art direction and design for a multi-platform digital campaign spanning social media, display advertising, and email — achieving a 40% engagement lift.",
     tags: ["Art Direction", "Social Media", "Display Ads", "Email"],
-    color: "#DFE4E8",
+    color: "#DB8A74",
   },
   {
     id: 3,
@@ -27,7 +27,7 @@ const projects = [
     description:
       "End-to-end product design for a SaaS analytics platform — from discovery and user research through wireframes, prototypes, and production-ready specs.",
     tags: ["Product Design", "User Research", "Figma", "Design System"],
-    color: "#E4DFE8",
+    color: "#2F243A",
   },
   {
     id: 4,
@@ -37,7 +37,7 @@ const projects = [
     description:
       "Print and digital editorial layout for an annual report — translating complex data into clear, beautiful visual narratives.",
     tags: ["Layout", "Print", "Data Visualization", "InDesign"],
-    color: "#E8EAE0",
+    color: "#FAC9B8",
   },
   {
     id: 5,
@@ -47,7 +47,7 @@ const projects = [
     description:
       "Sustainable packaging design and system for a consumer wellness brand, balancing shelf impact with environmental responsibility.",
     tags: ["Packaging", "3D Mockup", "Illustration", "Sustainability"],
-    color: "#EAE0E8",
+    color: "#9B9797",
   },
   {
     id: 6,
@@ -57,7 +57,7 @@ const projects = [
     description:
       "Strategic redesign of a nonprofit's digital presence — improving accessibility, conversion, and storytelling across 30+ pages.",
     tags: ["Web Design", "Accessibility", "Content Strategy", "Figma"],
-    color: "#E0E8EA",
+    color: "#444054",
   },
 ];
 

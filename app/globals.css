@@ -1,12 +1,15 @@
 @import "tailwindcss";
 
 :root {
-  --bg: #FAFAF8;
-  --surface: #F0EDE8;
-  --border: #E0DDD8;
-  --text-primary: #1A1A1A;
-  --text-secondary: #6B6860;
-  --accent: #2C2C2C;
+  --bg: #FDFAF9;
+  --surface: #FAC9B8;
+  --surface-muted: #F5E0D8;
+  --border: #E8C5B5;
+  --text-primary: #2F243A;
+  --text-secondary: #444054;
+  --accent: #DB8A74;
+  --accent-hover: #c97a64;
+  --gray: #9B9797;
 }
 
 * {
@@ -91,7 +94,8 @@ body {
 }
 
 .btn-primary:hover {
-  opacity: 0.82;
+  background: var(--accent-hover);
+  opacity: 1;
 }
 
 .btn-secondary {

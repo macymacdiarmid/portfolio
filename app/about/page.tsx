@@ -43,7 +43,7 @@ export default function AboutPage() {
           <div>
             <div
               className="w-full aspect-square"
-              style={{ background: "var(--surface)", border: "1px solid var(--border)" }}
+              style={{ background: "#FAC9B8", border: "1px solid var(--border)" }}
             />
           </div>
           <div className="flex flex-col justify-center">

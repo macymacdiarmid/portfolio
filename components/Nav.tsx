@@ -18,7 +18,7 @@ export default function Nav() {
       className="sticky top-0 z-50 flex items-center justify-between px-6 md:px-12 py-5"
       style={{
         borderBottom: "1px solid var(--border)",
-        background: "rgba(250,250,248,0.92)",
+        background: "rgba(253,250,249,0.92)",
         backdropFilter: "blur(12px)",
         WebkitBackdropFilter: "blur(12px)",
       }}
